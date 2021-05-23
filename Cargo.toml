@@ -1,0 +1,17 @@
+[package]
+name = "short-url"
+version = "0.1.0"
+authors = ["hazayan <hazayan@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+tide = "0.16.0"
+tera = "1.10.0"
+tide-tera = "0.2.2"
+async-std = { version = "1.8.0", features = ["attributes"] }
+serde = { version = "1.0", features = ["derive"] }
+sqlx = { version = "0.5.3", features = [ "sqlite", "runtime-async-std-native-tls" ] }
+anyhow = "1.0"
+futures = "0.3"
+dotenv = "0.15.0"
+crc = "1.8.1"

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/" method="post">
+  <div class="row content">
+    <div class="col">
+      <input type="url" 
+             name="input_url" 
+             id="input_url"
+             class="form-control url" 
+             placeholder="input url" 
+             required autofocus> 
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary mb-2">submit</button>
+    </div>
+  </div>
+</form>
+{% endblock content %}
