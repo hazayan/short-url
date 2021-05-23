@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+  $(document).ready(function() {
+      new ClipboardJS('.btn');
+  });
+</script>
+<div class="row content">
+  <div class="col">
+    <input type="url" 
+           name="output_url" 
+           id="output_url"
+           class="form-control url" 
+           value="{{short_url}}"
+           required autofocus readonly> 
+    
+  </div>
+  <div class="col">
+    <button type="submit"
+            class="btn btn-primary mb-2"
+            data-clipboard-target="#output_url">
+      copy
+    </button>
+    <a href="/"
+       class="btn btn-secondary mb-2"
+       role="button"
+       aria-pressed="true">back</a>
+  </div>
+</div>
+{% endblock content %}
